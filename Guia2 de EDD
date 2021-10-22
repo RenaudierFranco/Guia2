@@ -1,0 +1,169 @@
+using System;
+
+namespace Guia_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Ejercicio 1
+            int identificador;
+            int contra;
+
+            Console.WriteLine("Identifiquese: ");
+            identificador = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Contraseña: ");
+            contra = Convert.ToInt32(Console.ReadLine());
+
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Error!");
+
+                Console.WriteLine("Identifiquese: ");
+                identificador = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Contraseña: ");
+                contra = Convert.ToInt32(Console.ReadLine());
+
+            }
+            while (identificador != 1234 && contra != 1111);
+            Console.WriteLine("Bienvenido señor Stark.");
+
+
+
+            //Ejercicio 2
+            int num;
+            int dig = 0;
+
+            Console.WriteLine("Ingresa un numero: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            if (num == 0)
+                Console.WriteLine("Ingresa un numero: ");
+            else
+                do
+                {
+                    num = num / 10;
+                    dig = dig + 1;
+                }
+                   
+
+            while (num > 0);
+            Console.WriteLine("Tiene: " + dig);
+            Console.ReadLine();
+
+
+
+            //Ejercicio 3
+            for (int tabla = 1; tabla <= 9; tabla++)
+            {
+
+                for (int numero = 9; numero <= 9; numero++)
+                {
+                    Console.WriteLine("{0} * {1} = {2}", tabla, numero, tabla * numero);
+                }
+            }
+
+
+
+            //Ejercicio 4
+            for (int numero = 1; numero <= 9999999; numero++)
+            {
+                Console.WriteLine(numero);
+            }
+
+
+
+            //Ejercicio 5
+            for (int numero = 1; numero <= 9999999; numero++)
+            {
+                Console.WriteLine("Hola");
+                break;
+            }
+
+
+
+            //Ejercicio 6
+            int a = 5, b, c;
+            Console.WriteLine("El valor de A es : {0} ", a);
+            b = ++a;
+            Console.WriteLine("El valor de B es : {0} ", b);
+            c = a++;
+            Console.WriteLine("El valor de C es : {0} ", c);
+            b = b * 5;
+            Console.WriteLine("El valor de B multiplicado 5 es : {0} ", b);
+            a = a * 2;
+            Console.WriteLine("El valor de A multiplicado 2 es : {0} ", a);
+
+
+
+            //Ejercicio 7
+            int v = 3, d = -3;
+
+            Console.WriteLine("El valor de A es : {0} ", a);
+            Console.WriteLine("El valor de B es : {0} ", a + 2);
+            Console.WriteLine("El valor de B- es : {0} ", v);
+            Console.WriteLine("El valor de C es : {0} ", d);
+            Console.WriteLine("El valor de C* es : {0} ", 2);
+            Console.WriteLine("El valor de ++C es : {0} ", ++d);
+            Console.WriteLine("El valor de A* es : {0} ", a + 2);
+
+
+
+            //Ejercicio 8
+            string letra;
+
+            Console.WriteLine("Ingrese una letra para saber si es una vocal: ");
+            letra = Convert.ToString(Console.ReadLine());
+
+
+            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u")
+                Console.WriteLine("Su letra es una vocal.");
+            else
+                Console.WriteLine("Su letra no es una vocal.");
+
+
+
+            //Ejercicio 9
+            int contrase, contrase2;
+
+            Console.WriteLine("Ingrese su nombre: ");
+            Console.ReadLine();
+
+            Console.WriteLine("Ingrese su contraseña: ");
+            contrase = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ingrese su contraseña una vez mas por favor: ");
+            contrase2 = Convert.ToInt32(Console.ReadLine());
+
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Error!");
+
+                Console.WriteLine("Ingrese su contraseña: ");
+                contrase = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Ingrese su contraseña una vez mas por favor: ");
+                contrase2 = Convert.ToInt32(Console.ReadLine());
+            }
+            while (contrase2 != contrase);
+            Console.WriteLine("Bienvenid@.");
+
+
+
+            //Ejercicio 10
+            string nombre;
+
+            Console.WriteLine("Ingrese su nombre: ");
+            nombre = Convert.ToString(Console.ReadLine());
+
+            if (nombre == "franco")
+                Console.WriteLine("Q onda mastodonte, bestia parda, mamifero de dos patas.");
+            else
+                Console.WriteLine("Quien sos master?");
+        }
+    }
+}
